@@ -1,155 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Moringa Laddu | Healthy Sweet</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moringa Health - Natural Nutrition</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: #f8f8f8;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-        header {
-            background: linear-gradient(green, darkgreen);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+body {
+  background: #f8fff8;
+  color: #333;
+}
 
-        .btn {
-            background: orange;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 15px;
-        }
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #1b5e20;
+  color: white;
+  position: sticky;
+  top: 0;
+}
 
-        section {
-            padding: 30px;
-        }
+nav h2 {
+  color: #a5d6a7;
+}
 
-        h2 {
-            color: darkgreen;
-        }
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+/* Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  url('https://images.unsplash.com/photo-1587049352851-8d4e89133924');
+  background-size: cover;
+  color: white;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+.hero h1 {
+  font-size: 3rem;
+}
 
-        .product {
-            text-align: center;
-        }
+.btn {
+  padding: 12px 25px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-        footer {
-            background: black;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #1b5e20;
+  color: white;
+  padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>Smart Nutrition Moringa Laddu</h1>
-    <p>Healthy • Natural • Tasty</p>
-    <a href="#buy" class="btn">Buy Now</a>
-</header>
+<!-- Navbar -->
+<nav>
+  <h2>Moringa Health 🌿</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Problem</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
 
-<section class="product">
-    <h2>🍃 Our Product</h2>
-    <div class="card">
-        <p>Moringa Laddu is a smart nutrition snack made from natural ingredients to improve health and immunity.</p>
-    </div>
-</section>
+<!-- Hero -->
+<div class="hero">
+  <div>
+    <h1>Natural Nutrition for a Healthier India</h1>
+    <p>Fight nutritional deficiency with Moringa</p>
+    <button class="btn">Order Now</button>
+  </div>
+</div>
 
+<!-- Problem -->
 <section>
-    <h2>🚨 Problem We Solve</h2>
-    <div class="card">
-        <ul>
-            <li>Iron deficiency & anemia</li>
-            <li>Malnutrition in children & women</li>
-            <li>Unhealthy junk food habits</li>
-        </ul>
-    </div>
+  <h2 class="section-title">The Problem</h2>
+  <p>Millions in India suffer from nutritional deficiency due to lack of affordable healthy food.</p>
 </section>
 
+<!-- Products -->
 <section>
-    <h2>💡 Our Solution</h2>
+  <h2 class="section-title">Our Products</h2>
+
+  <div class="cards">
+
     <div class="card">
-        <ul>
-            <li>Made from moringa leaves</li>
-            <li>Mixed with dates, almonds, ghee</li>
-            <li>Healthy and ready-to-eat</li>
-        </ul>
+      <img src="https://images.unsplash.com/photo-1604908177522-4326cbb2e80b">
+      <h3>Moringa Powder</h3>
+      <p>Rich in vitamins & minerals</p>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1584367369856-9c1e4d5a5f90">
+      <h3>Moringa Capsules</h3>
+      <p>Easy daily nutrition supplement</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+      <h3>Moringa Tea</h3>
+      <p>Healthy & refreshing drink</p>
+    </div>
+
+  </div>
 </section>
 
+<!-- Benefits -->
 <section>
-    <h2>✨ Benefits</h2>
+  <h2 class="section-title">Benefits</h2>
+
+  <div class="cards">
     <div class="card">
-        <ul>
-            <li>Boosts iron levels</li>
-            <li>Improves immunity</li>
-            <li>Gives energy</li>
-            <li>100% natural</li>
-        </ul>
+      <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71">
+      <p>Boosts Immunity</p>
     </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352">
+      <p>Rich in Nutrients</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528">
+      <p>Improves Energy</p>
+    </div>
+  </div>
 </section>
 
+<!-- Contact -->
 <section>
-    <h2>🥜 Ingredients</h2>
-    <div class="card">
-        <ul>
-            <li>Moringa Leaves</li>
-            <li>Dates</li>
-            <li>Cashew</li>
-            <li>Almond</li>
-            <li>Ghee</li>
-        </ul>
-    </div>
+  <h2 class="section-title">Contact</h2>
+  <p>Email: your@email.com</p>
+  <p>Phone: +91 XXXXX XXXXX</p>
+
+  <a href="https://wa.me/91XXXXXXXXXX">
+    <button class="btn">Order on WhatsApp</button>
+  </a>
 </section>
 
-<section>
-    <h2>🎯 Who Can Use</h2>
-    <div class="card">
-        <ul>
-            <li>Children</li>
-            <li>Women</li>
-            <li>Students</li>
-            <li>Working professionals</li>
-        </ul>
-    </div>
-</section>
-
-<section id="buy" style="text-align:center;">
-    <h2>🛒 Buy Now</h2>
-    <p>Order your healthy laddu today!</p>
-
-    <!-- Replace number -->
-    <a href="https://wa.me/91XXXXXXXXXX" class="btn">Order on WhatsApp</a>
-</section>
-
+<!-- Footer -->
 <footer>
-    <p>Smart Nutrition Moringa Laddu | Group 9</p>
+  <p>© 2026 Moringa Health | Startup Project</p>
 </footer>
 
 </body>
