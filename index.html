@@ -5,106 +5,161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GreenAura Bites</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
 }
 
-body {
-  background: #f8fff8;
-  color: #333;
+body{
+    background:#f4fff4;
+    color:#222;
 }
 
 /* Navbar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  background: #1b5e20;
-  color: white;
-  position: sticky;
-  top: 0;
+nav{
+    background:#14532d;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-nav h2 {
-  color: #a5d6a7;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
 }
 
-/* Hero */
-.hero {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-  url('https://images.unsplash.com/photo-1587049352851-8d4e89133924');
-  background-size: cover;
-  color: white;
+nav ul{
+    display:flex;
+    list-style:none;
 }
 
-.hero h1 {
-  font-size: 3rem;
+nav ul li{
+    margin-left:20px;
 }
 
-.btn {
-  padding: 12px 25px;
-  background: #4caf50;
-  color: white;
-  border: none;
-  cursor: pointer;
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-/* Sections */
-section {
-  padding: 60px 20px;
-  text-align: center;
+/* Hero Section */
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
 }
 
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #2e7d32;
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
 }
 
-/* Cards */
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+.hero p{
+    font-size:22px;
+    margin-bottom:20px;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  width: 260px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.btn{
+    background:#22c55e;
+    padding:12px 25px;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
+/* Products */
+.products{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.products h2{
+    font-size:40px;
+    color:#14532d;
+    margin-bottom:40px;
+}
+
+.product-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px 0;
+    color:#14532d;
+}
+
+.card p{
+    padding:0 15px 20px;
+}
+
+/* About */
+.about{
+    background:#14532d;
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.about h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
 }
 
 /* Footer */
-footer {
-  background: #1b5e20;
-  color: white;
-  padding: 20px;
+footer{
+    background:#0b3b1f;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 </style>
 </head>
@@ -113,93 +168,73 @@ footer {
 
 <!-- Navbar -->
 <nav>
-  <h2>Moringa Health 🌿</h2>
-  <div>
-    <a href="#">Home</a>
-    <a href="#">Problem</a>
-    <a href="#">Products</a>
-    <a href="#">Contact</a>
-  </div>
+<div class="logo">
+<img src="https://i.imgur.com/zYIlgBl.png">
+<h2>GreenAura Bites</h2>
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
 </nav>
 
 <!-- Hero -->
-<div class="hero">
-  <div>
-    <h1>GreenAura Bites</h1>
-    <p>Fight nutritional deficiency with Moringa</p>
-    <button class="btn">Order Now</button>
-  </div>
+<section class="hero">
+<div>
+<h1>Healthy Snacks for a Healthier India</h1>
+<p>Nutritious • Delicious • Moringa Powered</p>
+<a href="#" class="btn">Explore Products</a>
 </div>
-
-<!-- Problem -->
-<section>
-  <h2 class="section-title">The Problem</h2>
-  <p>Millions in India suffer from nutritional deficiency due to lack of affordable healthy food.</p>
 </section>
 
 <!-- Products -->
-<section>
-  <h2 class="section-title">Our Products</h2>
+<section class="products">
+<h2>Our Products</h2>
 
-  <div class="cards">
+<div class="product-container">
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1604908177522-4326cbb2e80b">
-      <h3>Moringa Powder</h3>
-      <p>Rich in vitamins & minerals</p>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1000">
+<h3>Moringa Laddu</h3>
+<p>Iron-rich healthy laddus made with dates and dry fruits.</p>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1584367369856-9c1e4d5a5f90">
-      <h3>Moringa Capsules</h3>
-      <p>Easy daily nutrition supplement</p>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596797038530-2c107aa4e1fa?q=80&w=1000">
+<h3>Moringa Namkeen</h3>
+<p>Crunchy millet-based healthy snack perfect for tea-time.</p>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
-      <h3>Moringa Tea</h3>
-      <p>Healthy & refreshing drink</p>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=1000">
+<h3>Moringa Mudki</h3>
+<p>Traditional sweet with modern nutrition and natural taste.</p>
+</div>
 
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1000">
+<h3>Moringa Cake</h3>
+<p>Soft and vitamin-rich cake loved by kids and families.</p>
+</div>
+
+</div>
 </section>
 
-<!-- Benefits -->
-<section>
-  <h2 class="section-title">Benefits</h2>
-
-  <div class="cards">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71">
-      <p>Boosts Immunity</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352">
-      <p>Rich in Nutrients</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528">
-      <p>Improves Energy</p>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section>
-  <h2 class="section-title">Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>Phone: +91 XXXXX XXXXX</p>
-
-  <a href="https://wa.me/91XXXXXXXXXX">
-    <button class="btn">Order on WhatsApp</button>
-  </a>
+<!-- About -->
+<section class="about">
+<h2>Why GreenAura Bites?</h2>
+<p>
+GreenAura Bites provides nutritious moringa-based snacks that help fight iron deficiency and promote healthy living. 
+Our products are made with natural ingredients, no preservatives, and delicious taste for all age groups.
+</p>
 </section>
 
 <!-- Footer -->
 <footer>
-  <p>© 2026 Moringa Health | Startup Project</p>
+<p>© 2026 GreenAura Bites | Smart Nutrition for a Healthier You</p>
 </footer>
 
 </body>
