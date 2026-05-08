@@ -1,155 +1,438 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Moringa Laddu | Healthy Sweet</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenAura Bites</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: #f8f8f8;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        header {
-            background: linear-gradient(green, darkgreen);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+body{
+background:#f7fff7;
+color:#222;
+}
 
-        .btn {
-            background: orange;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 15px;
-        }
+/* Navbar */
+nav{
+width:100%;
+background:#14532d;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
 
-        section {
-            padding: 30px;
-        }
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
 
-        h2 {
-            color: darkgreen;
-        }
+.logo img{
+width:60px;
+height:60px;
+border-radius:50%;
+background:white;
+padding:5px;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+.logo h2{
+color:white;
+font-size:28px;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
 
-        .product {
-            text-align: center;
-        }
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
 
-        footer {
-            background: black;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
+nav ul li a:hover{
+color:#bbf7d0;
+}
+
+/* Hero Section */
+.hero{
+height:95vh;
+background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:65px;
+color:white;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:22px;
+color:#e5ffe5;
+margin-bottom:35px;
+max-width:800px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:#22c55e;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#15803d;
+transform:scale(1.05);
+}
+
+/* About */
+.about{
+padding:80px 10%;
+text-align:center;
+}
+
+.section-title{
+font-size:42px;
+color:#14532d;
+margin-bottom:20px;
+}
+
+.about p{
+font-size:18px;
+line-height:1.8;
+max-width:900px;
+margin:auto;
+}
+
+/* Products */
+.products{
+padding:80px 8%;
+background:#ecfdf5;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 18px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+font-size:24px;
+color:#14532d;
+margin-bottom:10px;
+}
+
+.price{
+font-size:22px;
+font-weight:700;
+color:#15803d;
+margin:10px 0;
+}
+
+.card p{
+font-size:15px;
+line-height:1.6;
+}
+
+/* Benefits */
+.benefits{
+padding:80px 10%;
+}
+
+.benefit-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.benefit-box{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.benefit-box h3{
+margin:15px 0;
+color:#14532d;
+}
+
+/* Custom Order */
+.custom-order{
+background:#14532d;
+color:white;
+padding:80px 10%;
+text-align:center;
+}
+
+.custom-order p{
+font-size:18px;
+margin:20px auto;
+max-width:800px;
+line-height:1.8;
+}
+
+/* Contact */
+.contact{
+padding:80px 10%;
+text-align:center;
+}
+
+.contact-box{
+max-width:700px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact-box input,
+.contact-box textarea{
+width:100%;
+padding:14px;
+margin:12px 0;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+}
+
+.contact-box button{
+background:#22c55e;
+color:white;
+border:none;
+padding:14px 30px;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* Footer */
+footer{
+background:#0b3b1f;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+footer p{
+margin:5px 0;
+}
+
+/* Responsive */
+@media(max-width:768px){
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero-content h1{
+font-size:42px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>Smart Nutrition Moringa Laddu</h1>
-    <p>Healthy • Natural • Tasty</p>
-    <a href="#buy" class="btn">Buy Now</a>
-</header>
+<!-- Navbar -->
+<nav>
+<div class="logo">
+<img src="https://raw.githubusercontent.com/ichinmayasahoo-cmd/Moringa-product/main/logo.png" alt="logo">
+<h2>GreenAura Bites</h2>
+</div>
 
-<section class="product">
-    <h2>🍃 Our Product</h2>
-    <div class="card">
-        <p>Moringa Laddu is a smart nutrition snack made from natural ingredients to improve health and immunity.</p>
-    </div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Healthy Snacks for a Healthier India</h1>
+<p>
+GreenAura Bites delivers delicious Moringa-based snacks packed with iron, vitamins, and natural nutrition.
+</p>
+<a href="#products" class="btn">Explore Products</a>
+</div>
 </section>
 
-<section>
-    <h2>🚨 Problem We Solve</h2>
-    <div class="card">
-        <ul>
-            <li>Iron deficiency & anemia</li>
-            <li>Malnutrition in children & women</li>
-            <li>Unhealthy junk food habits</li>
-        </ul>
-    </div>
+<!-- About -->
+<section class="about" id="about">
+<h2 class="section-title">About GreenAura Bites</h2>
+<p>
+GreenAura Bites is a healthy snack startup focused on solving iron deficiency and promoting natural nutrition through tasty Moringa-based products. Our snacks are made with pure ingredients, no preservatives, no palm oil, and are designed for busy professionals, children, and health-conscious families.
+</p>
 </section>
 
-<section>
-    <h2>💡 Our Solution</h2>
-    <div class="card">
-        <ul>
-            <li>Made from moringa leaves</li>
-            <li>Mixed with dates, almonds, ghee</li>
-            <li>Healthy and ready-to-eat</li>
-        </ul>
-    </div>
+<!-- Products -->
+<section class="products" id="products">
+<h2 class="section-title">Our Products</h2>
+
+<div class="product-grid">
+
+<div class="card">
+<img src="https://images.mrcook.app/recipe-image/018f03df-8e95-7477-b9e2-700542fe7609" alt="Moringa Laddu">
+<div class="card-content">
+<h3>Moringa Laddu</h3>
+<p class="price">₹179</p>
+<p>Iron-rich healthy laddus made with dates and dry fruits.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://www.earthytales.in/cdn/shop/products/MoringaNamkeen.jpg" alt="Moringa Namkeen">
+<div class="card-content">
+<h3>Moringa Namkeen</h3>
+<p class="price">₹99</p>
+<p>Crunchy millet-based healthy snack perfect for tea-time.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?q=80&w=1200" alt="Moringa Mudki">
+<div class="card-content">
+<h3>Moringa Mudki</h3>
+<p class="price">₹129</p>
+<p>Traditional sweet with modern nutrition and natural taste.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200" alt="Moringa Cake">
+<div class="card-content">
+<h3>Moringa Cake</h3>
+<p class="price">₹199</p>
+<p>Soft and vitamin-rich cake loved by kids and families.</p>
+</div>
+</div>
+
+</div>
 </section>
 
-<section>
-    <h2>✨ Benefits</h2>
-    <div class="card">
-        <ul>
-            <li>Boosts iron levels</li>
-            <li>Improves immunity</li>
-            <li>Gives energy</li>
-            <li>100% natural</li>
-        </ul>
-    </div>
+<!-- Benefits -->
+<section class="benefits">
+<h2 class="section-title">Why Choose Us?</h2>
+
+<div class="benefit-container">
+
+<div class="benefit-box">
+<h3>🌿 Natural Iron</h3>
+<p>Helps fight iron deficiency and anemia naturally.</p>
+</div>
+
+<div class="benefit-box">
+<h3>🛡 Immunity Boost</h3>
+<p>Packed with antioxidants and essential vitamins.</p>
+</div>
+
+<div class="benefit-box">
+<h3>👨‍👩‍👧 Family Friendly</h3>
+<p>Tasty snacks enjoyed by both children and adults.</p>
+</div>
+
+<div class="benefit-box">
+<h3>✅ Clean Label</h3>
+<p>No preservatives, no palm oil, only natural ingredients.</p>
+</div>
+
+</div>
 </section>
 
-<section>
-    <h2>🥜 Ingredients</h2>
-    <div class="card">
-        <ul>
-            <li>Moringa Leaves</li>
-            <li>Dates</li>
-            <li>Cashew</li>
-            <li>Almond</li>
-            <li>Ghee</li>
-        </ul>
-    </div>
+<!-- Custom Order -->
+<section class="custom-order">
+<h2 class="section-title" style="color:white;">Custom Orders Available</h2>
+<p>
+We also provide custom healthy snack boxes for birthdays, events, offices, gyms, schools, and festivals.
+Bulk orders and personalized packaging are available.
+</p>
+<a href="#contact" class="btn">Order Now</a>
 </section>
 
-<section>
-    <h2>🎯 Who Can Use</h2>
-    <div class="card">
-        <ul>
-            <li>Children</li>
-            <li>Women</li>
-            <li>Students</li>
-            <li>Working professionals</li>
-        </ul>
-    </div>
+<!-- Contact -->
+<section class="contact" id="contact">
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-box">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button>Send Message</button>
+</div>
 </section>
 
-<section id="buy" style="text-align:center;">
-    <h2>🛒 Buy Now</h2>
-    <p>Order your healthy laddu today!</p>
-
-    <!-- Replace number -->
-    <a href="https://wa.me/91XXXXXXXXXX" class="btn">Order on WhatsApp</a>
-</section>
-
+<!-- Footer -->
 <footer>
-    <p>Smart Nutrition Moringa Laddu | Group 9</p>
+<p>© 2026 GreenAura Bites</p>
+<p>Smart Nutrition for a Healthier Tomorrow 🌿</p>
 </footer>
 
 </body>
